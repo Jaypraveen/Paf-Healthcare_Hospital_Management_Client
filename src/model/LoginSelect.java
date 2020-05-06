@@ -18,7 +18,7 @@ public class LoginSelect {
 			Statement statement = null;
 			Connection con = obj.connect();
 			if (con == null) {
-				System.out.println("error connecting database.......");
+				System.out.println("error connecting database..");
 			}
 
 			String query = "select Type from admin where Username='" + un + "' and Password='" + pass + "' ";
