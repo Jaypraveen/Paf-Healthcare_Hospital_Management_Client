@@ -58,10 +58,10 @@ public class HospitalAPI extends HttpServlet {
 		
 		Map paras = getParasMap(request);
 		String output = h1.updateHospital(paras.get("hidHospitalIDSave").toString(),
-		paras.get("hosName").toString(),
-		paras.get("hosTelNo").toString(),
-		paras.get("hosAddress").toString(),
-		paras.get("hosEmail").toString());
+		paras.get("hosName").toString().replace('+', ' '),
+		paras.get("hosTelNo").toString().replace('+', ' '),
+		paras.get("hosAddress").toString().replace('+', ' ').replaceAll("%2C", ","),
+		paras.get("hosEmail").toString().replaceAll("%40", "@"));
 		response.getWriter().write(output); 
 	}
 
