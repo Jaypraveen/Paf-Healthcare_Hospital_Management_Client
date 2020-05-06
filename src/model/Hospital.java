@@ -62,15 +62,10 @@ public class Hospital {
                 String hosTelNo = rs.getString("hosTelNo");
                 String hosAddress = rs.getString("hosAddress");
                 String hosEmail = rs.getString("hosEmail");
-
-				//Replacing spaces in Hospital name
-				hosName=hosName.replace('+', ' ');
-				//Replacing spaces,commas and slashes in Hospital address
-				hosAddress=hosAddress.replace('+', ' ');
-				hosAddress=hosAddress.replaceAll("%2C",",");
-				hosAddress=hosAddress.replaceAll("%2F","/");
-				//Replacing @ in Hospital email
-				hosEmail=hosEmail.replaceAll("%40","@");
+                hosName = hosName.replace('+', ' ');
+     			hosEmail=hosEmail.replaceAll("%40","@");
+			    hosAddress=hosAddress.replaceAll("%2C",",");
+ 				hosAddress=hosAddress.replace('+','/');
 
                 // Add into the html table
                 output += "<tr><td><input id='hidHospitalIDUpdate'name='hidHospitalIDUpdate'type='hidden' value='" + hosID + "'>" +
