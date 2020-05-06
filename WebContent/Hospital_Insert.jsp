@@ -44,6 +44,31 @@
 <script
 	src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
 <script type="text/javascript" src="./Components/Hospital.js"></script>
+<style type="text/css">
+table {
+	font-family: arial, sans-serif;
+	border-collapse: collapse;
+	width: 90%;
+	margin-left: auto;
+	margin-right: auto;	
+	border: 1px;
+	border-radius: 6px;
+}
+
+td {
+	border: 1px solid #dddddd;
+	text-align: left;
+	padding: 8px;
+}
+
+
+th {
+	border: 1px solid #dddddd;	
+	background-color: #D5DBDB;
+	text-align: left;
+	padding: 10px;
+}
+</style>
 </head>
 <body>
 
